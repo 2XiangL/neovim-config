@@ -25,6 +25,7 @@ local basic_plugins = {
   "lewis6991/gitsigns.nvim",
   "akinsho/toggleterm.nvim",
   "christoomey/vim-tmux-navigator",
+  'nmac427/guess-indent.nvim',
 }
 
 local plugin_telescope = {
@@ -131,7 +132,9 @@ local supermaven = {
         suggestion_color = '#ffffff',
       },
       keymaps = {
-        accept_suggestion = "C-j",
+        accept_suggestion = "<C-h>",
+        clear_suggestion = "<C-k>",
+        accept_word = "<C-j>",
       }
     })
   end,

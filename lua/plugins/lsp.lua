@@ -1,5 +1,20 @@
 local cmp = require 'cmp'
 
+local cmp_status_ok, cmp = pcall(require, "cmp")
+if not cmp_status_ok then
+  return
+end
+
+local snip_status_ok, luasnip = pcall(require, "luasnip")
+
+require("luasnip.loaders.from_vscode").lazy_load()
+
+-- 下面会用到这个函数
+local check_backspace = function()
+  local col = vim.fn.col "." - 1
+  return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
+end
+
 cmp.setup({
   snippet = {
     expand = function(args)
@@ -45,7 +60,7 @@ cmp.setup({
   }),
 
   sources = cmp.config.sources({
-    { name = "supermaven" },
+    { name = 'supermaven' },
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
     { name = 'path' },

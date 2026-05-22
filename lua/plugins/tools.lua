@@ -62,3 +62,5 @@ require("nvim-treesitter").setup {
     max_file_lines = 1000,
   }
 }
+
+require("guess-indent").setup({})
