@@ -1,7 +1,5 @@
-require("core.core")
+vim.g.mapleader = " "
 
-require("plugins.plugins-setup")
-require("plugins.theme")
-require("plugins.tools")
-require("plugins.telescope")
-require("plugins.lsp")
+require("config.options")
+require("config.keymaps")
+require("config.lazy")

@@ -1,8 +1,3 @@
-vim.keymap.set("i", "jk", "<ESC>")
-vim.keymap.set("n", "tj", ":bprev<cr>")
-vim.keymap.set("n", "tk", ":bnext<cr>")
-vim.keymap.set("n", "tn", ":tabnew<cr>")
-
 vim.opt.number = true
 vim.opt.relativenumber = true
 
@@ -20,5 +15,3 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.termguicolors = true
 vim.opt.signcolumn = "yes"
-
-vim.g.mapleader = " "
